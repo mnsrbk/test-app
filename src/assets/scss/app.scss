@@ -1,0 +1,160 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+  margin-top: 60px;
+  .container {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      .controls {
+        .btn {
+          font-size: 14px;
+          border: 1px solid #dfe4ef;
+          border-radius: 30px;
+          margin-left: 10px;
+          font-weight: 600;
+        }
+      }
+    }
+    .page-title {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .search-form {
+      position: relative;
+      .search-icon {
+        font-size: 16px;
+        padding: 4px 4px 4px 4px;
+        position: absolute;
+      }
+      .search-input {
+        font-size: 16px;
+        font-weight: 500;
+        width: 50%;
+        padding: 4px 20px 4px 30px;
+        outline: 0;
+        border-width: 0 0 2px 0;
+        border-style: solid;
+        border-color: #6479a8;
+      }
+      .clear-button {
+        color: var(--danger);
+        padding: 0px;
+        font-size: 20px;
+        line-height: 20px;
+        margin-left: -15px;
+        transition: all 5100ms ease-in;
+      }
+    }
+    .categories-list {
+      margin-top: 20px;
+      .category-element {
+        height: 48px;
+        padding: 11px 0px 11px 14px;
+        border: 1px solid #dfe4ef;
+        .category-card {
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: baseline;
+          .chevron-container {
+            display: inline-block;
+            height: 23px;
+            min-width: 23px;
+            border: 1px solid #dedede;
+            margin-right: 10px;
+            line-height: 19px;
+            border-radius: 15px;
+            &.visible {
+              .chevron {
+                -ms-transform: rotate(-180deg);
+                transform: rotate(-180deg);
+              }
+            }
+            .chevron {
+              transition: transform 333ms ease-out;
+              margin-left: 6.5px;
+              scale: 1.5;
+            }
+          }
+        }
+        .category-title {
+          min-width: fit-content;
+          font-weight: 600;
+        }
+      }
+      .category-docs {
+        padding-left: 25px;
+        position: relative;
+        .documents-container {
+          min-height: 35px;
+          border: 1px solid #dfe4ef;
+        }
+      }
+      .no-content-text {
+        font-size: 12px;
+        position: absolute;
+        left: 35px;
+        top: 13px;
+      }
+    }
+    .doc-element {
+      height: 35px;
+      border: 1px solid #dfe4ef;
+      padding: 7px 0px 5px 12px;
+      display: flex;
+      align-items: baseline;
+      .doc-title {
+        font-weight: 600;
+        font-size: 14px;
+        padding-right: 7.5px;
+        min-width: fit-content;
+      }
+      .required-warn {
+        font-size: 12px;
+        font-weight: 600;
+        padding-left: 7.5px;
+      }
+    }
+    .desctiption-text {
+      vertical-align:bottom;
+      flex-grow: 1;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--gray);
+      padding-left: 10px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden
+    }
+    .actions {
+      min-width: 85px;
+      width: 85px;
+      height: 25px;
+      align-self: flex-end;
+      .btn {
+        padding: 2px 6px;
+        color: #8E9CBB;
+      }
+      .btn:active, .btn:hover {
+        color: var(--primary);
+      }
+    }
+    .on-drag {
+      * {
+        display: none;
+      }
+      height: 10px;
+      width: 100%;
+      background-color: var(--primary);
+      z-index: 10;
+    }
+    .chosen-ticket {
+      opacity: 1 !important;
+    }
+  }
+}
+
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
